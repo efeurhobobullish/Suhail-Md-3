@@ -1,0 +1,15 @@
+name: suhail-md
+services:
+  - name: suhail-md-service
+    type: web
+    runtime: docker
+    docker:
+      build_context: .
+      dockerfile: Dockerfile  
+    ports:
+      - 8000  
+    routes:
+      - src: /
+        dest: /
+    regions:
+      - fra
